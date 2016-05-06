@@ -1,8 +1,4 @@
--- setup GPIO
-gpio.mode(led1, gpio.OUTPUT)
-gpio.mode(led2, gpio.OUTPUT)
-
-srv=net.createServer(net.TCP)
+srv=net.createServer(net.TCP);
 srv:listen(80,function(conn)
     conn:on("receive", function(client,request)
         local buf = "";
